@@ -1,0 +1,27 @@
+{
+  "name": "tempa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "postcss src/tailwind.css -o public/assets/css/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moloypal2021/Tempa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moloypal2021/Tempa/issues"
+  },
+  "homepage": "https://github.com/moloypal2021/Tempa#readme",
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.3",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.4"
+  }
+}
