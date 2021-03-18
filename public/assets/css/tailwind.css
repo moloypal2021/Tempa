@@ -663,12 +663,6 @@ body {
 .max-w-\[264px\]{
 	max-width: 264px;
 }
-.max-w-md{
-	max-width: 28rem;
-}
-.max-w-xs{
-	max-width: 20rem;
-}
 .max-w-\[188px\]{
 	max-width: 188px;
 }
@@ -725,10 +719,6 @@ body {
 .py-\[95px\]{
 	padding-top: 95px;
 	padding-bottom: 95px;
-}
-.px-8{
-	padding-left: 2rem;
-	padding-right: 2rem;
 }
 .pr-8{
 	padding-right: 2rem;
