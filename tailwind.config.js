@@ -1,11 +1,20 @@
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
-  },
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      width: {
+        "340px": "340px",
+      },
+      height: {
+        "230px": "230px",
+        "400px": "400px",
+      },
+      maxWidth: {
+        "264px": "264px",
+        "598px": "598px",
+        "188px": "188px",
+      },
       colors: {
         dark: {
           title: "#212121",
@@ -21,6 +30,13 @@ module.exports = {
       },
       screens: {
         "2xl": "1440px",
+      },
+      fontSize: {
+        "40px": "40px",
+      },
+      lineHeight: {
+        11: "3rem",
+        "60px": "60px",
       },
     },
   },
