@@ -4,16 +4,22 @@ module.exports = {
   theme: {
     extend: {
       width: {
+        "260px": "260px",
         "340px": "340px",
       },
       height: {
+        "196px": "196px",
         "230px": "230px",
+        "360px": "360px",
         "400px": "400px",
       },
       maxWidth: {
         "264px": "264px",
         "598px": "598px",
         "188px": "188px",
+      },
+      paddings: {
+        18: "4.5rem",
       },
       colors: {
         dark: {
@@ -26,6 +32,7 @@ module.exports = {
           border: "#AAAAAA",
           text: "#212121",
           "text-sub": "#767676",
+          accent: "#040C0E",
         },
       },
       screens: {
