@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Title from "../../component/categoryTitle/title";
-import Filter from "../../component/categoryFilter/Filter";
+import Filter from "../../component/filter/Filter";
+import ItemsContain from "../../component/items/ItemsContain";
 
 export class Category extends Component {
   render() {
@@ -8,6 +9,7 @@ export class Category extends Component {
       <div>
         <Title />
         <Filter />
+        <ItemsContain />
       </div>
     );
   }

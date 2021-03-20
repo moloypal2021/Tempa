@@ -3,6 +3,7 @@ import Header from "./component/header/Header";
 import Footer from "./component/footer/Footer";
 import Homepage from "./pages/homepage/HomePage";
 import Category from "./pages/category/Category";
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,7 @@ function App() {
         <Header />
         {/* Router Pages */}
         <Switch>
+          <Route path="/productdetails" component={ProductDetails} />
           <Route path="/category" component={Category} />
           <Route path="/" component={Homepage} />
         </Switch>

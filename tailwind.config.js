@@ -7,12 +7,14 @@ module.exports = {
         "260px": "260px",
         "310px": "310px",
         "340px": "340px",
+        "400px": "400px",
       },
       height: {
         "196px": "196px",
         "230px": "230px",
         "360px": "360px",
         "400px": "400px",
+        "460px": "460px",
       },
       maxWidth: {
         "188px": "188px",
