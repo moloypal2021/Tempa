@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       width: {
         "260px": "260px",
+        "310px": "310px",
         "340px": "340px",
       },
       height: {
@@ -20,6 +21,7 @@ module.exports = {
       },
       paddings: {
         18: "4.5rem",
+        34: "8.5rem",
       },
       colors: {
         dark: {
@@ -33,6 +35,7 @@ module.exports = {
           text: "#212121",
           "text-sub": "#767676",
           accent: "#040C0E",
+          light: "#F7F7F7",
         },
       },
       screens: {
@@ -48,7 +51,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ["group-hover", "group-focus"],
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

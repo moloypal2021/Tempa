@@ -1,5 +1,4 @@
 // craco.config.js
-//require("tailwindcss")
 module.exports = {
   style: {
     postcss: {
