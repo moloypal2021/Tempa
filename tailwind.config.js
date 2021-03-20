@@ -15,9 +15,10 @@ module.exports = {
         "400px": "400px",
       },
       maxWidth: {
-        "264px": "264px",
-        "598px": "598px",
         "188px": "188px",
+        "264px": "264px",
+        "320px": "320px",
+        "598px": "598px",
       },
       paddings: {
         18: "4.5rem",
