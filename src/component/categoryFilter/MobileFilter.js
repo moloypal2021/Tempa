@@ -11,6 +11,7 @@ function MobileFilter(props) {
     };
     document.addEventListener("mousedown", handleClickOutside);
   }, [ref]);
+
   return (
     <div ref={ref}>
       <div className="flex justify-center">
@@ -50,54 +51,57 @@ function PopUp({ onClick }, props) {
           </button>
           {/* Menus */}
           <div className="w-full bg-white">
-            <div className="py-4 px-6 border-b border-dark-title flex items-center">
-              <button className="mr-2 transform scale-0 hidden">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19 12H5M12 19l-7-7 7-7"
-                    stroke="#000"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <h5 className="text-lg text-dark-title font-bold">FILTER</h5>
+            <div className="mb-20">
+              <div className="py-4 px-6 border-b border-dark-title flex items-center">
+                <button className="mr-2 transform scale-0 hidden">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19 12H5M12 19l-7-7 7-7"
+                      stroke="#000"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <h5 className="text-lg text-dark-title font-bold">FILTER</h5>
+              </div>
+              {/* Menu List */}
+              <div className="pl-6 ">
+                <div className="border-b border-dark-border py-4">
+                  <a href="{#}" className="text-base text-dark-title">
+                    Category
+                  </a>
+                </div>
+                <div className="border-b border-dark-border py-4">
+                  <a href="{#}" className="text-base text-dark-title">
+                    Style
+                  </a>
+                </div>
+                <div className="border-b border-dark-border py-4">
+                  <a href="{#}" className="text-base text-dark-title">
+                    Color
+                  </a>
+                </div>
+                <div className="border-b border-dark-border py-4">
+                  <a href="{#}" className="text-base text-dark-title">
+                    Size
+                  </a>
+                </div>
+                <div className="py-4">
+                  <a href="{#}" className="text-base text-dark-title">
+                    Price
+                  </a>
+                </div>
+              </div>
             </div>
-            {/* Menu List */}
-            <div className="pl-6 mb-20">
-              <div className="border-b border-dark-border py-4">
-                <a href="{#}" className="text-base text-dark-title">
-                  Category
-                </a>
-              </div>
-              <div className="border-b border-dark-border py-4">
-                <a href="{#}" className="text-base text-dark-title">
-                  Style
-                </a>
-              </div>
-              <div className="border-b border-dark-border py-4">
-                <a href="{#}" className="text-base text-dark-title">
-                  Color
-                </a>
-              </div>
-              <div className="border-b border-dark-border py-4">
-                <a href="{#}" className="text-base text-dark-title">
-                  Size
-                </a>
-              </div>
-              <div className="py-4">
-                <a href="{#}" className="text-base text-dark-title">
-                  Price
-                </a>
-              </div>
-            </div>
+
             <div className="p-6">
               <button className="py-2 w-full bg-dark-button rounded-lg text-base text-white font-bold text-center">
                 View items
