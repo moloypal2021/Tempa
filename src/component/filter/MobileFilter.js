@@ -32,7 +32,7 @@ function PopUp({ onClick }, props) {
   return (
     <div>
       {/* Mobile Filter PopUp Start */}
-      <div className="absolute bg-dark-title bg-opacity-30 inset-0 z-50">
+      <div className="fixed bg-dark-title bg-opacity-30 inset-0 z-50">
         <div className="flex items-start">
           {/* Toogle Close Button */}
           <button className="p-4 focus:outline-none h-8" onClick={onClick}>
@@ -110,7 +110,7 @@ function PopUp({ onClick }, props) {
                       Size
                     </h6>
                   </div>
-                  <div className="py-4">
+                  <div className="border-b border-dark-border py-4">
                     <h6
                       onClick={() => setActive("price")}
                       className="text-base text-dark-title"

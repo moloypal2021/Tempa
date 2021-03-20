@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-class Header extends Component {
+export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = { isToggleOn: true };
@@ -20,7 +21,7 @@ class Header extends Component {
         <nav className="bg-white">
           <div className="container mx-auto px-5 sm:px-6 lg:px-8 xl:px-10 lg:py-8 sm:py-4">
             <div className="relative flex items-center w-full h-16">
-              <div className="mr-auto">
+              <div className="mr-auto z-10">
                 {/* <!-- Mobile Nav toogle Button Start--> */}
                 <button
                   className="block lg:hidden  p-1 text-black hover:text-dark-title focus:outline-none"
@@ -44,36 +45,27 @@ class Header extends Component {
                 {/* <!-- Mobile Nav toogle Button End--> */}
 
                 {/* <!-- Desktop Menus Start --> */}
-                <div className="flex xl:space-x-6 lg:space-x-4 hidden lg:block ">
-                  <a
-                    href="{#}"
-                    className="text-black hover:text-dark-title py-2 rounded-md xl:text-2xl lg:text-xl "
-                  >
-                    Home
-                  </a>
-                  <a
-                    href="{#}"
-                    className="text-black hover:text-dark-title py-2 rounded-md xl:text-2xl lg:text-xl "
-                  >
-                    Shop
-                  </a>
-                  <a
-                    href="{#}"
-                    className="text-black hover:text-dark-title py-2 rounded-md xl:text-2xl lg:text-xl "
-                  >
-                    About
-                  </a>
-                  <a
-                    href="{#}"
-                    className="text-black hover:text-dark-title py-2 rounded-md xl:text-2xl lg:text-xl "
-                  >
-                    Contact
-                  </a>
+                <div className="hidden lg:block">
+                  <ul className="flex xl:space-x-6 lg:space-x-4">
+                    <li className="text-black hover:text-dark-title py-2 xl:text-2xl lg:text-xl">
+                      <Link to="/">Home</Link>
+                    </li>
+
+                    <li className="text-black hover:text-dark-title py-2 xl:text-2xl lg:text-xl ">
+                      <Link to="/category"> Shop</Link>
+                    </li>
+                    <li className="text-black hover:text-dark-title py-2 xl:text-2xl lg:text-xl ">
+                      <Link to="/">About</Link>
+                    </li>
+                    <li className="text-black hover:text-dark-title py-2 xl:text-2xl lg:text-xl ">
+                      <Link to="/">Contact</Link>
+                    </li>
+                  </ul>
                 </div>
                 {/* <!-- Desktop Menus Start --> */}
               </div>
               {/* <!-- Logos Start --> */}
-              <div className="lg:absolute lg:right-0 lg:left-0 mx-auto flex justify-center">
+              <div className="lg:absolute lg:right-0 lg:left-0 mx-auto text-center z-0">
                 <h1 className="lg:text-[40px] text-3xl font-bold text-black">
                   Tempa
                 </h1>
@@ -174,5 +166,3 @@ class Header extends Component {
     );
   }
 }
-
-export default Header;

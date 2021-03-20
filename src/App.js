@@ -10,11 +10,12 @@ function App() {
       <Router>
         {/* Header Navbar  */}
         <Header />
+
         {/* Router Pages */}
         <Switch>
           <Route path="/productdetails" component={ProductDetails} />
           <Route path="/category" component={Category} />
-          <Route path="/" component={Homepage} />
+          <Route path="/" exact component={Homepage} />
         </Switch>
 
         {/* Footer */}
