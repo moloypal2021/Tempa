@@ -28,6 +28,7 @@ function MobileFilter(props) {
 }
 
 function PopUp({ onClick }, props) {
+  const [activeMenu, setActive] = useState("main");
   return (
     <div>
       {/* Mobile Filter PopUp Start */}
@@ -49,59 +50,225 @@ function PopUp({ onClick }, props) {
               />
             </svg>
           </button>
-          {/* Menus */}
-          <div className="w-full bg-white">
-            <div className="mb-20">
-              <div className="py-4 px-6 border-b border-dark-title flex items-center">
-                <button className="mr-2 transform scale-0 hidden">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M19 12H5M12 19l-7-7 7-7"
-                      stroke="#000"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <h5 className="text-lg text-dark-title font-bold">FILTER</h5>
-              </div>
-              {/* Menu List */}
-              <div className="pl-6 ">
-                <div className="border-b border-dark-border py-4">
-                  <a href="{#}" className="text-base text-dark-title">
-                    Category
-                  </a>
-                </div>
-                <div className="border-b border-dark-border py-4">
-                  <a href="{#}" className="text-base text-dark-title">
-                    Style
-                  </a>
-                </div>
-                <div className="border-b border-dark-border py-4">
-                  <a href="{#}" className="text-base text-dark-title">
-                    Color
-                  </a>
-                </div>
-                <div className="border-b border-dark-border py-4">
-                  <a href="{#}" className="text-base text-dark-title">
-                    Size
-                  </a>
-                </div>
-                <div className="py-4">
-                  <a href="{#}" className="text-base text-dark-title">
-                    Price
-                  </a>
-                </div>
-              </div>
-            </div>
 
+          {/* Menus Box */}
+          <div className="w-full bg-white">
+            {/* Main Menu */}
+            {activeMenu === "main" && (
+              <div className="mb-20">
+                <div className="py-4 px-6 border-b border-dark-title flex items-center">
+                  <button className="mr-2 transform scale-0 hidden">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 12H5M12 19l-7-7 7-7"
+                        stroke="#000"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <h5 className="text-lg text-dark-title font-bold">FILTER</h5>
+                </div>
+                {/* Menu List */}
+                <div className="pl-6 ">
+                  <div className="border-b border-dark-border py-4">
+                    <h6
+                      onClick={() => setActive("category")}
+                      className="text-base text-dark-title"
+                    >
+                      Category
+                    </h6>
+                  </div>
+                  <div className="border-b border-dark-border py-4">
+                    <h6
+                      onClick={() => setActive("style")}
+                      className="text-base text-dark-title"
+                    >
+                      Style
+                    </h6>
+                  </div>
+                  <div className="border-b border-dark-border py-4">
+                    <h6
+                      onClick={() => setActive("color")}
+                      className="text-base text-dark-title"
+                    >
+                      Color
+                    </h6>
+                  </div>
+                  <div className="border-b border-dark-border py-4">
+                    <h6
+                      onClick={() => setActive("size")}
+                      className="text-base text-dark-title"
+                    >
+                      Size
+                    </h6>
+                  </div>
+                  <div className="py-4">
+                    <h6
+                      onClick={() => setActive("price")}
+                      className="text-base text-dark-title"
+                    >
+                      Price
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Category Menu */}
+            {activeMenu === "category" && (
+              <div className="mb-20">
+                <div className="py-4 px-6 border-b border-dark-title flex items-center">
+                  <button className="mr-2" onClick={() => setActive("main")}>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 12H5M12 19l-7-7 7-7"
+                        stroke="#000"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <h5 className="text-lg text-dark-title font-bold">
+                    Category
+                  </h5>
+                </div>
+                {/* Menu List */}
+                <div className="pl-6 ">
+                  <div className="flex items-center py-4 border-b border-dark-surface">
+                    <input
+                      type="checkbox"
+                      className="rounded text-dark-title text-lg focus:ring-0 mr-3"
+                      id="ceramic"
+                    />
+                    <label
+                      className="text-lg text-dark-title"
+                      htmlFor="ceramic"
+                    >
+                      Ceramic
+                    </label>
+                  </div>
+                  <div className="flex items-center py-4 border-b border-dark-surface">
+                    <input
+                      type="checkbox"
+                      className="rounded text-dark-title text-lg focus:ring-0 mr-3"
+                      id="wood"
+                    />
+                    <label className="text-lg text-dark-title" htmlFor="wood">
+                      Wood
+                    </label>
+                  </div>
+                  <div className="flex items-center py-4 border-b border-dark-surface">
+                    <input
+                      type="checkbox"
+                      className="rounded text-dark-title text-lg focus:ring-0 mr-3"
+                      id="metal"
+                    />
+                    <label className="text-lg text-dark-title" htmlFor="metal">
+                      Metal
+                    </label>
+                  </div>
+                  <div className="flex items-center py-4 border-b border-dark-surface">
+                    <input
+                      type="checkbox"
+                      className="rounded text-dark-title text-lg focus:ring-0 mr-3"
+                      id="clay"
+                    />
+                    <label className="text-lg text-dark-title" htmlFor="clay">
+                      Clay
+                    </label>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Style Menu */}
+            {activeMenu === "style" && (
+              <div className="mb-20">
+                <div className="py-4 px-6 border-b border-dark-title flex items-center">
+                  <button className="mr-2" onClick={() => setActive("main")}>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 12H5M12 19l-7-7 7-7"
+                        stroke="#000"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <h5 className="text-lg text-dark-title font-bold">Style</h5>
+                </div>
+                {/* Menu List */}
+                <div className="pl-6 ">
+                  <div className="flex items-center py-4 border-b border-dark-surface">
+                    <input
+                      type="checkbox"
+                      className="rounded text-dark-title text-lg focus:ring-0 mr-3"
+                      id="ceramic"
+                    />
+                    <label
+                      className="text-lg text-dark-title"
+                      htmlFor="ceramic"
+                    >
+                      Ceramic
+                    </label>
+                  </div>
+                  <div className="flex items-center py-4 border-b border-dark-surface">
+                    <input
+                      type="checkbox"
+                      className="rounded text-dark-title text-lg focus:ring-0 mr-3"
+                      id="wood"
+                    />
+                    <label className="text-lg text-dark-title" htmlFor="wood">
+                      Wood
+                    </label>
+                  </div>
+                  <div className="flex items-center py-4 border-b border-dark-surface">
+                    <input
+                      type="checkbox"
+                      className="rounded text-dark-title text-lg focus:ring-0 mr-3"
+                      id="metal"
+                    />
+                    <label className="text-lg text-dark-title" htmlFor="metal">
+                      Metal
+                    </label>
+                  </div>
+                  <div className="flex items-center py-4 border-b border-dark-surface">
+                    <input
+                      type="checkbox"
+                      className="rounded text-dark-title text-lg focus:ring-0 mr-3"
+                      id="clay"
+                    />
+                    <label className="text-lg text-dark-title" htmlFor="clay">
+                      Clay
+                    </label>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* View Items Button */}
             <div className="p-6">
               <button className="py-2 w-full bg-dark-button rounded-lg text-base text-white font-bold text-center">
                 View items
