@@ -15,7 +15,7 @@ function Dropdown(props) {
   return (
     <div className="relative" ref={ref}>
       <button
-        className="bg-white text-dark-title font-medium text-lg py-4 px-4 rounded inline-flex justify-center items-center w-310px relative"
+        className="bg-white text-dark-title font-medium text-lg py-4 px-4 border border-dark-border inline-flex justify-center items-center w-310px relative"
         onClick={() => setOpen(!open)}
       >
         {props.title}
@@ -28,25 +28,9 @@ function Dropdown(props) {
         </svg>
       </button>
 
-      {open && <DropdownMenu />}
+      {open && props.children}
     </div>
   );
 }
 
-function DropdownMenu() {
-  return (
-    <div>
-      <div className="flex items-center p-5 border-b border-dark-surface">
-        <input
-          type="checkbox"
-          className="rounded text-dark-title text-lg focus:ring-0 mr-3"
-          id="ceramic"
-        />
-        <label className="text-lg text-dark-title" htmlFor="ceramic">
-          Ceramic
-        </label>
-      </div>
-    </div>
-  );
-}
 export default Dropdown;
