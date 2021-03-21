@@ -15,7 +15,7 @@ function Dropdown(props) {
   return (
     <div className="relative" ref={ref}>
       <button
-        className="bg-white text-dark-title font-medium text-lg py-4 px-4 border border-dark-border inline-flex justify-center items-center lg:w-310px md:w-60 sm:w-64 relative"
+        className={`bg-white text-dark-title font-medium text-lg py-4 px-4 border border-dark-border inline-flex justify-center items-center w-full max-w-${props.width} mx-auto relative`}
         onClick={() => setOpen(!open)}
       >
         {props.title}

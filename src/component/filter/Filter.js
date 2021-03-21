@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import Dropdown from "./Dropdown";
+import Dropdown from "../dropdown/Dropdown";
 import MobileFilter from "./MobileFilter";
 const Filter = forwardRef(({ open, setOpen }, ref) => {
   return (
@@ -10,7 +10,7 @@ const Filter = forwardRef(({ open, setOpen }, ref) => {
           <div className="sm:block hidden ">
             <div className="grid md:grid-cols-3 grid-cols-2 gap-8 py-8">
               {/* Catagory Dropdown */}
-              <Dropdown title={`Catagory`} ref={ref}>
+              <Dropdown title={`Catagory`} ref={ref} width="310px">
                 <div className="absolute bg-white mt-3 lg:w-310px md:w-60 sm:w-64 z-10">
                   <div className="flex items-center p-5 border-b border-dark-surface">
                     <input
@@ -59,7 +59,7 @@ const Filter = forwardRef(({ open, setOpen }, ref) => {
               </Dropdown>
 
               {/* Style Dropdown */}
-              <Dropdown title={`Style`} ref={ref}>
+              <Dropdown title={`Style`} ref={ref} width="310px">
                 <div className="absolute bg-white mt-3 lg:w-310px md:w-60 sm:w-64 z-10">
                   <div className="flex items-center p-5 border-b border-dark-surface">
                     <input
@@ -108,7 +108,7 @@ const Filter = forwardRef(({ open, setOpen }, ref) => {
               </Dropdown>
 
               {/* Color Dropdown */}
-              <Dropdown title={`Color`} ref={ref}>
+              <Dropdown title={`Color`} ref={ref} width="310px">
                 <div className="absolute bg-white mt-3 lg:w-310px md:w-60 sm:w-64 z-10">
                   <div className="flex items-center p-5 border-b border-dark-surface">
                     <input
@@ -157,7 +157,7 @@ const Filter = forwardRef(({ open, setOpen }, ref) => {
               </Dropdown>
 
               {/* Size Dropdown */}
-              <Dropdown title={`Size`} ref={ref}>
+              <Dropdown title={`Size`} ref={ref} width="310px">
                 <div className="absolute bg-white mt-3 lg:w-310px md:w-60 sm:w-64 z-10">
                   <div className="flex items-center p-5 border-b border-dark-surface">
                     <input
@@ -206,7 +206,7 @@ const Filter = forwardRef(({ open, setOpen }, ref) => {
               </Dropdown>
 
               {/* Price Dropdown */}
-              <Dropdown title={`Price`} ref={ref}>
+              <Dropdown title={`Price`} ref={ref} width="310px">
                 <div className="absolute bg-white mt-3 lg:w-310px md:w-60 sm:w-64 z-10">
                   <div className="flex items-center p-5 border-b border-dark-surface">
                     <input
