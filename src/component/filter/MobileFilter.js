@@ -13,8 +13,8 @@ function MobileFilter(props) {
   }, [ref]);
 
   return (
-    <div ref={ref}>
-      <div className="flex justify-center">
+    <div>
+      <div className="flex justify-center" ref={ref}>
         <button
           className="py-2 px-10 border border-dark-border text-base text-dark-title"
           onClick={() => setOpen(!open)}
