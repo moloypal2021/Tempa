@@ -1,12 +1,16 @@
 import React, { Component } from "react";
+import ProductCartDetails from "../../component/productDetails/ProductCartDetails";
 
 export class ProductDetails extends Component {
   render() {
     return (
       <div>
-        <h1 className="text-7xl font-bold text-red-700 py-24 text-center">
-          Product Details
-        </h1>
+        <section className="container mx-auto px-5 sm:px-6 lg:px-8 xl:px-10 md:block hidden">
+          <div className="py-6 border-b border-dark-border">
+            <h1 className="text-40px text-dark-title font-bold">Shop</h1>
+          </div>
+        </section>
+        <ProductCartDetails />
       </div>
     );
   }
