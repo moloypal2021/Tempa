@@ -5,10 +5,8 @@ function Dropdown(props) {
   const ref = useRef();
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (event.target != null) {
-        if (!ref.current.contains(event.target)) {
-          setOpen(false);
-        }
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);

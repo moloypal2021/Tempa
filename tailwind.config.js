@@ -56,6 +56,9 @@ module.exports = {
       zIndex: {
         "-1": "-1",
       },
+      boxShadow: {
+        d: "0px 0px 12px rgba(0, 0, 0, 0.2)",
+      },
     },
   },
   variants: {

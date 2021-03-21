@@ -16,60 +16,70 @@ const ProductCartDetails = forwardRef(({ open, setOpen }, ref) => {
             <h2 className="xl:text-3xl lg:text-2xl md:text-xl sm:text-lg text-base text-title lg:text-left text-center xl:mb-12 lg:mb-10 md:mb-8 sm:mb-6 mb-4">
               50$
             </h2>
-            <div className="grid grid-cols-2 gap-16">
+            <div className="grid grid-cols-2 lg:gap-x-16 sm:gap-x-12 gap-x-6 md:gap-y-12 sm:gap-y-10 gap-y-8 mb-12">
               <div className="">
-                <Dropdown title={`Catagory`} ref={ref} width="235px">
-                  <div className="absolute bg-white shadow mt-4 max-w-235px w-full z-10">
-                    <div className="w-4 h-4 bg-red-600 absolute right-2 -top-2"></div>
-                    <div className="flex items-center p-5 border-b border-dark-surface">
-                      <input
-                        type="checkbox"
-                        className="rounded text-dark-title text-lg focus:ring-0 mr-3"
-                        id="ceramic"
-                      />
-                      <label
-                        className="text-lg text-dark-title"
-                        htmlFor="ceramic"
-                      >
-                        Ceramic
-                      </label>
+                <Dropdown title={`Size`} ref={ref} width="235px">
+                  <div className="absolute bg-white shadow-d rounded-lg mt-4 max-w-235px w-full z-10">
+                    <div className="w-4 h-4 bg-white absolute right-4 -top-2 transform rotate-45"></div>
+                    <div className="text-center pt-4 pb-3 border-b border-dark-surface">
+                      <p className="text-base text-title">S</p>
                     </div>
-                    <div className="flex items-center p-5 border-b border-dark-surface">
-                      <input
-                        type="checkbox"
-                        className="rounded text-dark-title text-lg focus:ring-0 mr-3"
-                        id="wood"
-                      />
-                      <label className="text-lg text-dark-title" htmlFor="wood">
-                        Wood
-                      </label>
+                    <div className="text-center py-3 border-b border-dark-surface">
+                      <p className="text-base text-title">M</p>
                     </div>
-                    <div className="flex items-center p-5 border-b border-dark-surface">
-                      <input
-                        type="checkbox"
-                        className="rounded text-dark-title text-lg focus:ring-0 mr-3"
-                        id="metal"
-                      />
-                      <label
-                        className="text-lg text-dark-title"
-                        htmlFor="metal"
-                      >
-                        Metal
-                      </label>
-                    </div>
-                    <div className="flex items-center p-5 border-b border-dark-surface">
-                      <input
-                        type="checkbox"
-                        className="rounded text-dark-title text-lg focus:ring-0 mr-3"
-                        id="clay"
-                      />
-                      <label className="text-lg text-dark-title" htmlFor="clay">
-                        Clay
-                      </label>
+                    <div className="text-center py-3">
+                      <p className="text-base text-title">L</p>
                     </div>
                   </div>
                 </Dropdown>
               </div>
+              <div className="">
+                <Dropdown title={`Color`} ref={ref} width="235px">
+                  <div className="absolute bg-white shadow-d rounded-lg mt-4 max-w-235px w-full z-10">
+                    <div className="w-4 h-4 bg-white absolute right-4 -top-2 transform rotate-45"></div>
+                    <div className="text-center pt-4 pb-3 border-b border-dark-surface">
+                      <p className="text-base text-title">Black</p>
+                    </div>
+                    <div className="text-center py-3 border-b border-dark-surface">
+                      <p className="text-base text-title">White</p>
+                    </div>
+                    <div className="text-center py-3">
+                      <p className="text-base text-title">Red</p>
+                    </div>
+                  </div>
+                </Dropdown>
+              </div>
+              <div className="">
+                <div className="flex items-center">
+                  <label htmlFor="num" className="text-xl text-title mr-6">
+                    Quantity
+                  </label>
+                  <input
+                    type="text"
+                    className="lg:w-14 lg:h-14 sm:w-12 sm:h-12 w-10 h-10 border border-dark-surface text-center"
+                    value="1"
+                    id="num"
+                  />
+                </div>
+              </div>
+              <div className="">
+                <button className="w-full max-w-235px md:py-4 py-3 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white lg:hidden block">
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div className="">
+              <h5 className="text-xl text-title font-medium md:mb-6 md:mb-4 mb-3">
+                DESCRIPTION
+              </h5>
+              <p className="md:text-lg text-base text-title lg:leading-11 mb-10 max-w-lg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                duis mauris lacus fermentum pharetra viverra vestibulum ac nam.
+                Commodo nunc amet duis nisi lacus neque.
+              </p>
+              <button className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white  lg:block hidden">
+                Add to cart
+              </button>
             </div>
           </div>
         </div>

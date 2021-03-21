@@ -5,7 +5,7 @@ function MobileFilter(props) {
   const ref = useRef();
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!ref.current.contains(event.target)) {
+      if (ref.current && !ref.current.contains(event.target)) {
         setOpen(false);
       }
     };
