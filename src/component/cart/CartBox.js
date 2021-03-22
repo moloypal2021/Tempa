@@ -18,7 +18,7 @@ const CartBox = () => {
             </h3>
           </div>
           <div className="flex justify-center lg:mb-8 sm:mb-6 mb-4">
-            <Link to="/shopingcart">
+            <Link to="/checkout">
               <button className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white">
                 Check out
               </button>

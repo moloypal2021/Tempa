@@ -6,6 +6,7 @@ import Category from "./pages/category/Category";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import ProductListing from "./pages/productListing/ProductListing";
 import ShopingCart from "./pages/shopingCart/ShopingCart";
+import CheckOut from "./pages/checkOut/CheckOut";
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
 
         {/* Router Pages */}
         <Switch>
+          <Route path="/checkout" component={CheckOut} />
           <Route path="/shopingcart" component={ShopingCart} />
           <Route path="/productlisting" component={ProductListing} />
           <Route path="/productdetails" component={ProductDetails} />
