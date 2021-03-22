@@ -45,9 +45,9 @@ const CartItem = () => {
                     <path
                       d="M25.33 4H6.67A2.67 2.67 0 004 6.67v18.66C4 26.81 5.2 28 6.67 28h18.66c1.48 0 2.67-1.2 2.67-2.67V6.67C28 5.19 26.8 4 25.33 4zM16 10.67v10.66M10.67 16h10.66"
                       stroke="#000"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </button>
@@ -66,9 +66,9 @@ const CartItem = () => {
                     <path
                       d="M25.333 4H6.667A2.667 2.667 0 004 6.667v18.666A2.667 2.667 0 006.667 28h18.666A2.667 2.667 0 0028 25.333V6.667A2.667 2.667 0 0025.333 4zM10.667 16h10.667"
                       stroke="#000"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </button>
@@ -86,9 +86,9 @@ const CartItem = () => {
                     <path
                       d="M4 8h24M10.67 8V5.33a2.67 2.67 0 012.66-2.66h5.34a2.67 2.67 0 012.66 2.66V8m4 0v18.67a2.67 2.67 0 01-2.66 2.66H9.33a2.67 2.67 0 01-2.66-2.66V8h18.66zM13.33 14.67v8M18.67 14.67v8"
                       stroke="#767676"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </button>

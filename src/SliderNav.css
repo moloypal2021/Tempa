@@ -1,0 +1,64 @@
+.owl-carousel {
+    position: relative !important;
+}
+
+.owl-nav {
+    position: absolute !important;
+    top: -74px;
+    right: 32px;
+    display: flex !important;
+    align-items: center !important;
+}
+
+@media (min-width: 768px) {
+    .owl-nav {
+        top: -80px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .owl-nav {
+        top: -90px !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .owl-nav {
+        top: -96px !important;
+    }
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next {
+    font-size: 40px !important;
+    margin: 0px 8px !important;
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+}
+
+@media (min-width: 768px) {
+    .owl-nav .owl-prev, .owl-nav .owl-next {
+        margin: 0px 10px !important;
+    }
+}
+
+.owl-nav .owl-prev span, .owl-nav .owl-next span {
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+    z-index: 10 !important;
+}
+
+.owl-nav .owl-prev:focus span, .owl-nav .owl-next:focus span {
+    color: #000 !important;
+}
+
+.owl-nav .owl-prev:focus, .owl-nav .owl-next:focus {
+    outline: none !important;
+}

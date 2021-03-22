@@ -44,9 +44,9 @@ const OrderSummary = () => {
                   <path
                     d="M4 8h24M10.67 8V5.33a2.67 2.67 0 012.66-2.66h5.34a2.67 2.67 0 012.66 2.66V8m4 0v18.67a2.67 2.67 0 01-2.66 2.66H9.33a2.67 2.67 0 01-2.66-2.66V8h18.66zM13.33 14.67v8M18.67 14.67v8"
                     stroke="#767676"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </button>
@@ -90,9 +90,9 @@ const OrderSummary = () => {
                   <path
                     d="M4 8h24M10.67 8V5.33a2.67 2.67 0 012.66-2.66h5.34a2.67 2.67 0 012.66 2.66V8m4 0v18.67a2.67 2.67 0 01-2.66 2.66H9.33a2.67 2.67 0 01-2.66-2.66V8h18.66zM13.33 14.67v8M18.67 14.67v8"
                     stroke="#767676"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </button>

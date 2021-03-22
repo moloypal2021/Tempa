@@ -19,7 +19,7 @@ export default class Header extends Component {
     return (
       <div>
         <nav className="bg-white">
-          <div className="container mx-auto px-5 sm:px-6 lg:px-8 xl:px-10 lg:py-8 sm:py-4">
+          <div className="container mx-auto px-5 sm:px-6 lg:px-8 xl:px-10 lg:py-6 sm:py-4">
             <div className="relative flex items-center w-full h-16">
               <div className="mr-auto z-10">
                 {/* <!-- Mobile Nav toogle Button Start--> */}
@@ -46,7 +46,7 @@ export default class Header extends Component {
 
                 {/* <!-- Desktop Menus Start --> */}
                 <div className="hidden lg:block">
-                  <ul className="flex xl:space-x-6 lg:space-x-4">
+                  <ul className="flex xl:space-x-12 lg:space-x-8">
                     <li className="text-black hover:text-dark-title py-2 xl:text-2xl lg:text-xl">
                       <Link to="/">Home</Link>
                     </li>
@@ -104,12 +104,12 @@ export default class Header extends Component {
 
           {/* Mobile menu, show/hide based on menu stat Start  */}
           <div
-            className={`lg:hidden absolute bg-dark-title bg-opacity-70 inset-0 z-50 ${
+            className={`lg:hidden fixed bg-dark-title bg-opacity-70 inset-0 z-50 ${
               this.state.isToggleOn ? "hidden" : "block"
             }`}
           >
             <div className="fixed left-0 sm:max-w-xs max-w-264px w-full h-full bg-white md:px-10 sm:px-8 px-4 sm:pt-8 sm:py-6 py-4">
-              <div className="flex mb-12">
+              <div className="flex mb-10">
                 <button
                   className="p-1 text-black hover:text-dark-title focus:outline-none"
                   onClick={this.navToggle}
@@ -135,25 +135,25 @@ export default class Header extends Component {
               <div className="px-5">
                 <a
                   href="{#}"
-                  className="text-black hover:text-dark-title py-2 rounded-md sm:text-xl text-lg block"
+                  className="text-black font-medium hover:text-dark-title py-2 rounded-md sm:text-xl text-lg block"
                 >
                   Home
                 </a>
                 <a
                   href="{#}"
-                  className="text-black hover:text-dark-title py-2 rounded-md sm:text-xl text-lg block"
+                  className="text-black font-medium hover:text-dark-title py-2 rounded-md sm:text-xl text-lg block"
                 >
                   Shop
                 </a>
                 <a
                   href="{#}"
-                  className="text-black hover:text-dark-title py-2 rounded-md sm:text-xl text-lg block"
+                  className="text-black font-medium hover:text-dark-title py-2 rounded-md sm:text-xl text-lg block"
                 >
                   About
                 </a>
                 <a
                   href="{#}"
-                  className="text-black hover:text-dark-title py-2 rounded-md sm:text-xl text-lg block"
+                  className="text-black font-medium hover:text-dark-title py-2 rounded-md sm:text-xl text-lg block"
                 >
                   Contact
                 </a>

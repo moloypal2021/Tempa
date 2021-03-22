@@ -10,13 +10,11 @@ export default class Item extends Component {
             alt=""
             className="w-full xl:h-400px lg:h-80 md:h-72 sm:h-64 h-230px object-cover"
           />
-          <div className="mt-2 text-center">
-            <figcaption className="sm:text-lg text-base text-dark-title sm:leading-11">
+          <div className="mt-4 text-center">
+            <figcaption className="sm:text-lg text-base text-dark-title mb-2">
               Ceramic vase
             </figcaption>
-            <p className="sm:text-lg text-base text-dark-title sm:leading-11">
-              50$
-            </p>
+            <p className="sm:text-lg text-base text-dark-title">50$</p>
           </div>
         </figure>
       </div>
