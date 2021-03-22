@@ -1,4 +1,5 @@
 import React, { forwardRef } from "react";
+import { Link } from "react-router-dom";
 import Dropdown from "../dropdown/Dropdown";
 import Slider from "../slider/Slider";
 const ProductCartDetails = forwardRef(({ open, setOpen }, ref) => {
@@ -82,9 +83,11 @@ const ProductCartDetails = forwardRef(({ open, setOpen }, ref) => {
                 duis mauris lacus fermentum pharetra viverra vestibulum ac nam.
                 Commodo nunc amet duis nisi lacus neque.
               </p>
-              <button className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white  lg:block hidden">
-                Add to cart
-              </button>
+              <Link to="/shopingcart">
+                <button className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white  lg:block hidden">
+                  Add to cart
+                </button>
+              </Link>
             </div>
           </div>
         </div>
