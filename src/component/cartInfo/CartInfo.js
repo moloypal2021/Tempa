@@ -24,14 +24,11 @@ const CartInfo = () => {
     <div>
       <div className="lg:border-b pb-8">
         <div className="flex flex-row justify-between">
-          <h5
-            onClick={() => handleEmailInputOpen()}
-            className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4"
-          >
+          <h5 className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4">
             1. Contact information
           </h5>
           {emailInputOpen ? null : (
-            <p onClick={() => handleDeliveryInputOpenClose()}>modify</p>
+            <p onClick={() => handleEmailInputOpen()}>modify</p>
           )}
         </div>
         <div className={`${emailInputOpen ? "block" : "hidden"}`}>
