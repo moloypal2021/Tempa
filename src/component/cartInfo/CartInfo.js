@@ -1,30 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CartInfo = () => {
-  //   let isDelivery = false;
-  let isShipping = false;
-  let isPayment = false;
+  const [emailInputOpen, setEmailInputOpen] = useState();
+  const [deliveryInputOpen, setDeliveryInputOpen] = useState();
+  const [shippingInputOpen, setShippingInputOpen] = useState();
+
+  const handleEmailInputOpen = () => {
+    if (emailInputOpen) setEmailInputOpen(false);
+    else setEmailInputOpen(true);
+  };
+
+  const handleDeliveryInputOpenClose = () => {
+    if (deliveryInputOpen) setDeliveryInputOpen(false);
+    else setDeliveryInputOpen(true);
+  };
+
+  const handleShippingInputOpenClose = () => {
+    if (shippingInputOpen) setShippingInputOpen(false);
+    else setShippingInputOpen(true);
+  };
+
   return (
     <div>
       <div className="lg:border-b pb-8">
-        <h5 className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4">
-          1. Contact information
-        </h5>
-        <input
-          className="sm:text-base text-sm border border-dark-light-border rounded-sm px-3 sm:py-4 py-2 placeholder:text-dark-text-sub w-full"
-          placeholder="Email"
-        />
-        <div className="flex justify-center md:py-6 py-4">
-          <button className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white">
-            Continue
-          </button>
+        <div className="flex flex-row justify-between">
+          <h5
+            onClick={() => handleEmailInputOpen()}
+            className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4"
+          >
+            1. Contact information
+          </h5>
+          {emailInputOpen ? null : (
+            <p onClick={() => handleDeliveryInputOpenClose()}>modify</p>
+          )}
+        </div>
+        <div className={`${emailInputOpen ? "block" : "hidden"}`}>
+          <input
+            className="sm:text-base text-sm border border-dark-light-border rounded-sm px-3 sm:py-4 py-2 placeholder:text-dark-text-sub w-full"
+            placeholder="Email"
+          />
+          <div className="flex justify-center md:py-6 py-4">
+            <button
+              onClick={() => handleEmailInputOpen()}
+              className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white"
+            >
+              Continue
+            </button>
+          </div>
         </div>
       </div>
       <div className="lg:border-b lg:pt-12 pb-8">
-        <h5 className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4">
-          2. Delivery methods
-        </h5>
-        <div className="">
+        <div className="flex flex-row justify-between">
+          <h5
+            onClick={() => handleDeliveryInputOpenClose()}
+            className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4"
+          >
+            2. Delivery methods
+          </h5>
+          {deliveryInputOpen ? null : (
+            <p onClick={() => handleDeliveryInputOpenClose()}>modify</p>
+          )}
+        </div>
+        <div className={`${deliveryInputOpen ? "block" : "hidden"}`}>
           <div className="border border-dark-light-border divide-y">
             <div className="flex items-center px-6 sm:py-4 py-2">
               <input
@@ -54,17 +91,26 @@ const CartInfo = () => {
             </div>
           </div>
           <div className="flex justify-center md:py-6 py-4">
-            <button className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white">
+            <button
+              onClick={() => handleDeliveryInputOpenClose()}
+              className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white"
+            >
               Continue
             </button>
           </div>
         </div>
       </div>
       <div className="lg:border-b lg:pt-12 pb-8">
-        <h5 className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4">
-          3. Shipping address
-        </h5>
-        <div className="">
+        <div className="flex flex-row justify-between">
+          <h5 className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4">
+            3. Shipping address
+          </h5>
+          {shippingInputOpen ? null : (
+            <p onClick={() => handleShippingInputOpenClose()}>modify</p>
+          )}
+        </div>
+
+        <div className={`${shippingInputOpen ? "block" : "hidden"}`}>
           <input
             className="sm:text-base text-sm border border-dark-light-border rounded-sm px-3 sm:py-4 py-2 placeholder:text-dark-text-sub w-full mb-4"
             placeholder="John"
@@ -97,17 +143,20 @@ const CartInfo = () => {
             className="sm:text-base text-sm border border-dark-light-border rounded-sm px-3 sm:py-4 py-2 placeholder:text-dark-text-sub w-full mb-4"
             placeholder="Phone number"
           />
-        </div>
-        <div className="mt-1">
-          <input type="checkbox" className="custom-check" id="save" />
-          <label htmlFor="save" className="sm:text-base text-sm">
-            Save this information for the next time
-          </label>
-        </div>
-        <div className="flex justify-center md:py-6 py-4">
-          <button className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white">
-            Continue
-          </button>
+          <div className="mt-2">
+            <input type="checkbox" className="custom-check" id="save" />
+            <label htmlFor="save" className="sm:text-base text-sm">
+              Save this information for the next time
+            </label>
+          </div>
+          <div className="flex justify-center md:py-6 py-4">
+            <button
+              onClick={() => handleShippingInputOpenClose()}
+              className="xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8 md:py-4 py-2 bg-dark-button rounded-lg md:text-lg text-base font-bold text-white"
+            >
+              Continue
+            </button>
+          </div>
         </div>
       </div>
       <div className="lg:py-12">

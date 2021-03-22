@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Title from "../../component/categoryTitle/Title";
+import Title from "../../component/categoryTitle/title";
 import Filter from "../../component/filter/Filter";
 import ItemsContain from "../../component/items/ItemsContain";
 import Item from "../../component/items/Item";
