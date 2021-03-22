@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ProductCartDetails from "../../component/productDetails/ProductCartDetails";
+import PopularProduct from "../../component/popularProduct/PopularProduct";
+import Category from "../../component/category/Category";
 
 export class ProductDetails extends Component {
   render() {
@@ -11,6 +13,8 @@ export class ProductDetails extends Component {
           </div>
         </section>
         <ProductCartDetails />
+        <PopularProduct />
+        <Category />
       </div>
     );
   }

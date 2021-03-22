@@ -14,7 +14,7 @@ function MobileFilter(props) {
 
   return (
     <div>
-      <div className="flex justify-center" ref={ref}>
+      <div className={`flex justify-${props.position}`} ref={ref}>
         <button
           className="py-2 px-10 border border-dark-border text-base text-dark-title"
           onClick={() => setOpen(!open)}

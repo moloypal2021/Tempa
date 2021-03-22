@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import Dropdown from "../dropdown/Dropdown";
 import MobileFilter from "./MobileFilter";
-const Filter = forwardRef(({ open, setOpen }, ref) => {
+const Filter = forwardRef(({ open, setOpen, mobPosition }, ref) => {
   return (
     <div>
       <section className="lg:py-16 md:py-12 sm:py-10 py-8 sm:bg-dark-light">
@@ -258,7 +258,7 @@ const Filter = forwardRef(({ open, setOpen }, ref) => {
 
           {/* Mobile Filter */}
           <div className="sm:hidden block">
-            <MobileFilter />
+            <MobileFilter position={mobPosition} />
           </div>
         </div>
       </section>

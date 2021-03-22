@@ -8,7 +8,7 @@ const ProductCartDetails = forwardRef(({ open, setOpen }, ref) => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Items Image Slider */}
           <div className="">
-            <div className="md:max-w-2xl sm:max-w-lg max-w-xs mx-auto">
+            <div className="md:max-w-2xl sm:max-w-lg max-w-xs mx-auto  overflow-hidden">
               <Slider />
             </div>
           </div>

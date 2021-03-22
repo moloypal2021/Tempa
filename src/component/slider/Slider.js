@@ -15,21 +15,21 @@ export default class Slider extends Component {
           items={1}
           margin={10}
         >
-          <div className="item w-auto h-800px">
+          <div className="item lg:h-710px md:h-500px sm:h-460px h-300px">
             <img
               src="https://source.unsplash.com/x04UenhOSPE"
               alt=""
               className="w-full h-full object-cover object-center"
             />
           </div>
-          <div className="item w-auto h-800px">
+          <div className="item lg:h-710px md:h-500px sm:h-460px h-300px">
             <img
               src="https://source.unsplash.com/FlWT15cO2xQ"
               alt=""
               className="w-full h-full object-cover object-center"
             />
           </div>
-          <div className="item w-auto h-800px">
+          <div className="item lg:h-710px md:h-500px sm:h-460px h-300px">
             <img
               src="https://source.unsplash.com/A4YhZ3Fe6rA"
               alt=""

@@ -11,11 +11,15 @@ module.exports = {
       },
       height: {
         "196px": "196px",
+        "200px": "200px",
         "230px": "230px",
+        "270px": "270px",
+        "300px": "300px",
         "360px": "360px",
         "400px": "400px",
         "460px": "460px",
-        "800px": "710px",
+        "500px": "500px",
+        "710px": "710px",
       },
       maxWidth: {
         "188px": "188px",
@@ -23,6 +27,7 @@ module.exports = {
         "264px": "264px",
         "310px": "310px",
         "320px": "320px",
+        "345px": "345px",
         "598px": "598px",
       },
       paddings: {
