@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
 const CartInfo = () => {
-  const [emailInputOpen, setEmailInputOpen] = useState();
+  const [emailInputOpen, setEmailInputOpen] = useState(true);
   const [deliveryInputOpen, setDeliveryInputOpen] = useState();
   const [shippingInputOpen, setShippingInputOpen] = useState();
-
+  const [creditCardInputOpen, setCreditCardInputOpen] = useState();
+  const [idealInputOpen, setIdealInputOpen] = useState();
   const handleEmailInputOpen = () => {
     if (emailInputOpen) setEmailInputOpen(false);
     else setEmailInputOpen(true);
@@ -20,6 +21,16 @@ const CartInfo = () => {
     else setShippingInputOpen(true);
   };
 
+  const handleCreditCardInputOpenClose = () => {
+    if (creditCardInputOpen) setCreditCardInputOpen(false);
+    else setCreditCardInputOpen(true);
+  };
+
+  const handleIdealInputOpenClose = () => {
+    if (idealInputOpen) setIdealInputOpen(false);
+    else setIdealInputOpen(true);
+  };
+
   return (
     <div>
       <div className="lg:border-b pb-8">
@@ -31,7 +42,7 @@ const CartInfo = () => {
             <p onClick={() => handleEmailInputOpen()}>modify</p>
           )}
         </div>
-        <div className={`${emailInputOpen ? "block" : "hidden"}`}>
+        <div className={`${emailInputOpen ? "block" : "hidden"} `}>
           <input
             className="sm:text-base text-sm border border-dark-light-border rounded-sm px-3 sm:py-4 py-2 placeholder:text-dark-text-sub w-full"
             placeholder="Email"
@@ -48,10 +59,7 @@ const CartInfo = () => {
       </div>
       <div className="lg:border-b lg:pt-12 pb-8">
         <div className="flex flex-row justify-between">
-          <h5
-            onClick={() => handleDeliveryInputOpenClose()}
-            className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4"
-          >
+          <h5 className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4">
             2. Delivery methods
           </h5>
           {deliveryInputOpen ? null : (
@@ -162,7 +170,12 @@ const CartInfo = () => {
         </h5>
         <div className="border border-dark-light-border divide-y">
           <div className="flex items-center px-6 sm:py-4 py-2">
-            <input type="checkbox" className="custom-check" id="card" />
+            <input
+              type="checkbox"
+              className="custom-check"
+              id="card"
+              onChange={() => handleCreditCardInputOpenClose()}
+            />
             <label htmlFor="card" className="sm:text-base text-sm">
               Credit card
             </label>
@@ -240,7 +253,9 @@ const CartInfo = () => {
               </div>
             </div>
           </div>
-          <div className="py-3 px-5">
+          <div
+            className={`${creditCardInputOpen ? "block" : "hidden"}  py-3 px-5`}
+          >
             <div className="mt-1 relative rounded-md shadow-sm">
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                 <span className="">
@@ -288,7 +303,12 @@ const CartInfo = () => {
             />
           </div>
           <div className="flex items-center px-6 sm:py-4 py-2">
-            <input type="checkbox" className="custom-check" id="ideal" />
+            <input
+              type="checkbox"
+              className="custom-check"
+              id="ideal"
+              onChange={() => handleIdealInputOpenClose()}
+            />
             <label htmlFor="ideal" className="sm:text-base text-sm">
               iDEAL
             </label>
@@ -326,6 +346,15 @@ const CartInfo = () => {
                   </clipPath>
                 </defs>
               </svg>
+            </div>
+          </div>
+          <div className={`${idealInputOpen ? "block" : "hidden"}  py-3 px-5`}>
+            <div className="mt-1 relative rounded-md shadow-sm">
+              <input
+                type="text"
+                className="border border-dark-light-border rounded-sm bg-dark-light px-3 sm:py-4 py-2 placeholder:text-sub w-full sm:mb-4 mb-3"
+                placeholder="Select bank"
+              />
             </div>
           </div>
         </div>
