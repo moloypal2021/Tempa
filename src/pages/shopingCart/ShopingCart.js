@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Title from "../../component/categoryTitle/title";
+import Title from "../../component/categoryTitle/Title";
 import CartBox from "../../component/cart/CartBox";
 
 export default class ShopingCart extends Component {

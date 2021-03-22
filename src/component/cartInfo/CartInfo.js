@@ -34,12 +34,17 @@ const CartInfo = () => {
   return (
     <div>
       <div className="lg:border-b pb-8">
-        <div className="flex flex-row justify-between">
-          <h5 className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4">
+        <div className="flex flex-row justify-between items-center md:mb-8 sm:mb-6 mb-4">
+          <h5 className="sm:text-lg text-base font-medium text-dark-title">
             1. Contact information
           </h5>
           {emailInputOpen ? null : (
-            <p onClick={() => handleEmailInputOpen()}>modify</p>
+            <p
+              onClick={() => handleEmailInputOpen()}
+              className="text-xs text-dark-title"
+            >
+              modify
+            </p>
           )}
         </div>
         <div className={`${emailInputOpen ? "block" : "hidden"} `}>
@@ -58,12 +63,17 @@ const CartInfo = () => {
         </div>
       </div>
       <div className="lg:border-b lg:pt-12 pb-8">
-        <div className="flex flex-row justify-between">
-          <h5 className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4">
+        <div className="flex flex-row justify-between items-center md:mb-8 sm:mb-6 mb-4">
+          <h5 className="sm:text-lg text-base font-medium text-dark-title">
             2. Delivery methods
           </h5>
           {deliveryInputOpen ? null : (
-            <p onClick={() => handleDeliveryInputOpenClose()}>modify</p>
+            <p
+              onClick={() => handleDeliveryInputOpenClose()}
+              className="text-xs text-dark-title"
+            >
+              modify
+            </p>
           )}
         </div>
         <div className={`${deliveryInputOpen ? "block" : "hidden"}`}>
@@ -106,12 +116,17 @@ const CartInfo = () => {
         </div>
       </div>
       <div className="lg:border-b lg:pt-12 pb-8">
-        <div className="flex flex-row justify-between">
-          <h5 className="sm:text-lg text-base font-medium text-dark-title md:mb-8 sm:mb-6 mb-4">
+        <div className="flex flex-row justify-between items-center  md:mb-8 sm:mb-6 mb-4">
+          <h5 className="sm:text-lg text-base font-medium text-dark-title">
             3. Shipping address
           </h5>
           {shippingInputOpen ? null : (
-            <p onClick={() => handleShippingInputOpenClose()}>modify</p>
+            <p
+              onClick={() => handleShippingInputOpenClose()}
+              className="text-xs text-dark-title"
+            >
+              modify
+            </p>
           )}
         </div>
 
