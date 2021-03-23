@@ -271,36 +271,33 @@ const CartInfo = () => {
           <div
             className={`${creditCardInputOpen ? "block" : "hidden"}  py-3 px-5`}
           >
-            <div className="mt-1 relative rounded-md shadow-sm">
+            <div className="mt-1 relative rounded-md shadow-sm  sm:mb-4 mb-3">
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                <span className="">
-                  <svg
-                    width="27"
-                    height="26"
-                    viewBox="0 0 27 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21.1416 11.9526H5.59583C4.3693 11.9526 3.375 12.8735 3.375 14.0094V21.2082C3.375 22.3441 4.3693 23.2649 5.59583 23.2649H21.1416C22.3682 23.2649 23.3625 22.3441 23.3625 21.2082V14.0094C23.3625 12.8735 22.3682 11.9526 21.1416 11.9526Z"
-                      stroke="#767676"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M7.81641 11.9523V7.83873C7.81641 6.475 8.40136 5.16713 9.44257 4.20282C10.4838 3.23852 11.896 2.69678 13.3685 2.69678C14.841 2.69678 16.2532 3.23852 17.2944 4.20282C18.3356 5.16713 18.9206 6.475 18.9206 7.83873V11.9523"
-                      stroke="#767676"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
+                <svg
+                  className="sm:w-8 sm:h-8 w-6 h-6"
+                  viewBox="0 0 27 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.1416 11.9526H5.59583C4.3693 11.9526 3.375 12.8735 3.375 14.0094V21.2082C3.375 22.3441 4.3693 23.2649 5.59583 23.2649H21.1416C22.3682 23.2649 23.3625 22.3441 23.3625 21.2082V14.0094C23.3625 12.8735 22.3682 11.9526 21.1416 11.9526Z"
+                    stroke="#767676"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M7.81641 11.9523V7.83873C7.81641 6.475 8.40136 5.16713 9.44257 4.20282C10.4838 3.23852 11.896 2.69678 13.3685 2.69678C14.841 2.69678 16.2532 3.23852 17.2944 4.20282C18.3356 5.16713 18.9206 6.475 18.9206 7.83873V11.9523"
+                    stroke="#767676"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
               <input
                 type="text"
-                className="border border-dark-light-border rounded-sm bg-dark-light px-3 sm:py-4 py-2 placeholder:text-sub w-full sm:mb-4 mb-3"
+                className="border border-dark-light-border rounded-sm bg-dark-light px-3 sm:py-4 py-2 placeholder:text-sub w-full"
                 placeholder="Card number"
               />
             </div>
@@ -364,11 +361,10 @@ const CartInfo = () => {
             </div>
           </div>
           <div className={`${idealInputOpen ? "block" : "hidden"}  py-3 px-5`}>
-            <div className="mt-1 relative rounded-md shadow-sm">
+            <div className="mt-1 ">
               <input
-                type="text"
-                className="border border-dark-light-border rounded-sm bg-dark-light px-3 sm:py-4 py-2 placeholder:text-sub w-full sm:mb-4 mb-3"
-                placeholder="Select bank"
+                className="sm:text-base text-sm bg-dark-light border border-dark-light-border rounded-sm px-3 sm:py-4 py-2 placeholder:text-dark-text-sub w-full mb-4"
+                placeholder="Select Bank"
               />
             </div>
           </div>

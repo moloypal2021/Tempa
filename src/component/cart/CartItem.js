@@ -3,7 +3,7 @@ import React from "react";
 const CartItem = () => {
   return (
     <div>
-      <div className="grid sm:grid-cols-2 grid-cols-7 gap-8 items-center lg:py-14 md:py-10 sm:py-8 py-6 border-b border-dark-light-border">
+      <div className="grid sm:grid-cols-2 grid-cols-7 gap-8 items-center lg:py-14 md:py-10 sm:py-8 py-6 border-b border-dark-light-border md:px-6">
         <div className="sm:col-span-1 col-span-3">
           <img
             src="https://source.unsplash.com/random"

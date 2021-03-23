@@ -16,7 +16,8 @@ export class Category extends Component {
           grid="1"
           lgGapX="16"
           GapX="8"
-          GapY="12"
+          smGapY="12"
+          GapY="8"
         >
           <Item xlH="460px" lgH="96" mdH="80" smH="360px" H="300px" />
           <Item xlH="460px" lgH="96" mdH="80" smH="360px" H="300px" />

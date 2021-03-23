@@ -13,8 +13,8 @@ function MobileFilter(props) {
   }, [ref]);
 
   return (
-    <div>
-      <div className={`flex justify-${props.position}`} ref={ref}>
+    <div ref={ref}>
+      <div className={`flex justify-${props.position}`}>
         <button
           className="py-2 px-10 border border-dark-border text-base text-dark-title"
           onClick={() => setOpen(!open)}
@@ -35,7 +35,10 @@ function PopUp({ onClick }, props) {
       <div className="fixed bg-dark-title bg-opacity-30 inset-0 z-50">
         <div className="flex items-start">
           {/* Toogle Close Button */}
-          <button className="p-4 focus:outline-none h-8" onClick={onClick}>
+          <button
+            className="px-4 py-4 focus:outline-none bg-black"
+            onClick={onClick}
+          >
             <svg
               width="32"
               height="32"
@@ -57,23 +60,6 @@ function PopUp({ onClick }, props) {
             {activeMenu === "main" && (
               <div className="mb-20">
                 <div className="py-4 px-6 border-b border-dark-title flex items-center">
-                  <button className="mr-2 transform scale-0 hidden">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19 12H5M12 19l-7-7 7-7"
-                        stroke="#000"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </button>
                   <h5 className="text-lg text-dark-title font-bold">FILTER</h5>
                 </div>
                 {/* Menu List */}
@@ -270,7 +256,10 @@ function PopUp({ onClick }, props) {
 
             {/* View Items Button */}
             <div className="p-6">
-              <button className="py-2 w-full bg-dark-button rounded-lg text-base text-white font-bold text-center">
+              <button
+                className="py-2 w-full bg-dark-button rounded-lg text-base text-white font-bold text-center"
+                onClick={onClick}
+              >
                 View items
               </button>
             </div>

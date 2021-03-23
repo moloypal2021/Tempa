@@ -15,23 +15,25 @@ export default class ProductListing extends Component {
           </div>
         </section>
         <Filter mobPosition="start" />
-        <ItemsContain
-          gridLg="4"
-          gridMd="3"
-          grid="2"
-          lgGapX="8"
-          GapX="4"
-          GapY="12"
-        >
-          <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
-          <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
-          <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
-          <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
-          <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
-          <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
-          <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
-          <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
-        </ItemsContain>
+        <div className="sm:mx-0 -mx-6">
+          <ItemsContain
+            gridLg="4"
+            gridMd="3"
+            grid="2"
+            lgGapX="8"
+            GapX="4"
+            GapY="12"
+          >
+            <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
+            <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
+            <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
+            <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
+            <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
+            <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
+            <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
+            <Item xlH="360px" lgH="72" mdH="60" smH="56" H="200px" />
+          </ItemsContain>
+        </div>
       </div>
     );
   }

@@ -13,14 +13,16 @@ function Dropdown(props) {
   }, [ref]);
 
   return (
-    <div className="relative" ref={ref}>
+    <div className={`relative ${props.addClass}`} ref={ref}>
       <button
         className={`bg-white text-dark-title font-medium text-lg py-4 px-4 border border-dark-border inline-flex justify-center items-center w-full max-w-${props.width} mx-auto relative`}
         onClick={() => setOpen(!open)}
       >
         {props.title}
         <svg
-          className="fill-current h-4 w-4 absolute right-4"
+          className={`fill-current h-4 w-4 absolute right-4 ${
+            open ? "transform rotate-180" : ""
+          }`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >

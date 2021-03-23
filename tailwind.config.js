@@ -49,6 +49,7 @@ module.exports = {
           "text-sub": "#767676",
           accent: "#040C0E",
           light: "#F7F7F7",
+          red: "#CC0000",
         },
       },
       screens: {

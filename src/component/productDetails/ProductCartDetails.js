@@ -62,7 +62,7 @@ const ProductCartDetails = forwardRef(({ open, setOpen }, ref) => {
                   </label>
                   <input
                     type="text"
-                    className="lg:w-14 lg:h-14 sm:w-12 sm:h-12 w-10 h-10 border border-dark-surface text-center"
+                    className="lg:w-14 lg:h-14 sm:w-12 sm:h-12 w-10 h-10 border border-dark-border text-center"
                     placeholder="1"
                     id="num"
                   />
