@@ -70,10 +70,10 @@ const ProductCartDetails = forwardRef(({ open, setOpen }, ref) => {
               </div>
               <div className="">
                 <Link to="/shopingcart">
-                  <button className="w-full max-w-235px md:py-4 py-3 bg-dark-button rounded-lg md:text-lg sm:text-base text-sm font-bold text-white lg:hidden block relative">
+                  <button className="w-full max-w-235px md:py-4 py-3 bg-dark-button rounded-lg md:text-lg sm:text-base text-sm font-bold text-white flex items-center justify-center lg:hidden block">
                     {/* Spinner */}
                     <svg
-                      className="animate-spin h-6 w-6 absolute sm:left-6 left-3"
+                      className="animate-spin sm:h-6 sm:w-6 w-5 h-5 mr-2"
                       viewBox="0 0 38 36"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -216,9 +216,8 @@ const ProductCartDetails = forwardRef(({ open, setOpen }, ref) => {
                       fill="#fff"
                     />
                   </svg>
-
                   {/* Button Text */}
-                  <span>Add to cart</span>
+                  Add to cart
                 </button>
               </Link>
             </div>
